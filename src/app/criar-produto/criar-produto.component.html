@@ -1,0 +1,23 @@
+<h3>Novo Produto</h3>
+<div>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input type="text" formControlName="descricao" placeholder="Descrição" required name="descricao" class="form-control" id="descricao" maxLength="200">
+    </div>
+    <div class="invalid-input" *ngIf="submitted && formProduto?.descricao?.errors?.required">
+      A descrição é obrigatória.
+    </div>
+
+    <div class="form-group">
+      <label for="preco">Preço:</label>
+      <input type="number" formControlName="preco" placeholder="Preço" name="preco" class="form-control" id="preco" min="0" onkeypress="return event.charCode >= 48">
+    </div>
+    <div class="invalid-input" *ngIf="submitted && formProduto?.preco?.errors?.required">
+      O preço é obrigatório.
+    </div>
+
+    <button (click)="_voltar()" type="submit" class="btn btn-secondary"><i class="fa fa-arrow-left fa-3" aria-hidden="true"></i> Voltar</button>
+    <button type="submit" class="btn btn-success float-right">Criar Produto</button>
+  </form>
+</div>

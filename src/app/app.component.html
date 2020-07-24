@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <br>
+  <img class="center" src="https://saudebusiness.com/wp-content/uploads/2015/09/MV-Logomarca.jpg" />  
+  <br>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm text-center">
+      <button type="button" class="btn btn-primary" routerLink="produtos">Listar Produtos</button>
+    </div>
+    <div class="col-sm text-center">
+      <button type="button" class="btn btn-primary" routerLink="criar">Adicionar Produto</button>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<h2>Detalhes do Produto</h2> 
+
+<hr/>
+<div *ngIf="produto">
+  <div>
+    <label><b>Descrição: </b></label> {{produto.descricao}}
+  </div>
+  <br>
+  <div>
+    <label><b>Preço: </b></label> {{produto.preco}}
+  </div>
+</div>
+<br>
+<button (click)="_voltar()" type="submit" class="btn btn-secondary"><i class="fa fa-arrow-left fa-3" aria-hidden="true"></i> Voltar</button>
